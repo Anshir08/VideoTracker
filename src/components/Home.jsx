@@ -77,7 +77,6 @@ function Home() {
           current = sorted[i];
         }
       }
-      console.log("merged", merged);
       merged.push(current);
       return merged;
     });
@@ -209,14 +208,14 @@ function Home() {
             alignItems: "center",
             justifyContent: "center",
             marginTop: "1rem",
+            marginBottom: "1rem",
           }}
         >
           <video
             ref={videoRef}
             width="720"
             controls
-            
-            // autoPlay
+            autoPlay
             onTimeUpdate={() => handleIntervals("update")}
             onEnded={() => handleIntervals("ended")}
             onSeeked={() => handleIntervals("seeked")}
